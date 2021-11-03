@@ -8,7 +8,7 @@ The following steps automate a vulnerability scan of a new public package:
 4. If the package or package dependencies contains any vulnerability, the build will fail and a detailed report will be generated.
 ## ![](/Images/software-composition-analysis-architecture-diagram.jpg)
 
-Detailed instructions here:  https://aws-blogs-prod.amazon.com/infrastructure-and-automation/how-to-automate-your-software-composition-analysis-on-aws/
+Detailed instructions here:  https://aws.amazon.com/blogs/infrastructure-and-automation/how-to-automate-your-software-composition-analysis-on-aws/
 
 1. A developer adds a new package or updates a version of an existing package into the relevant requirements file (for example, in Python, it is requirements.txt)
 2. After the change is committed and pushed to AWS CodeCommit repository, a trigger invokes a Lambda function. The function contains Python code that extracts only the changes, to avoid the overhead of working on the entire dependency list.
@@ -49,7 +49,7 @@ cdk deploy
 ```
 The previous command adds a new AWS CloudFormation template, which creates an AWS CodeCommit git repository to hold the source code, a CodeBuild build server, a CodeArtifact repository to hold the scanned packages, and two Lambda functions.
 
-For additional information check the [blogpost page](https://aws-blogs-prod.amazon.com/infrastructure-and-automation/how-to-automate-your-software-composition-analysis-on-aws/)
+For additional information check the [blogpost page](https://aws.amazon.com/blogs/infrastructure-and-automation/how-to-automate-your-software-composition-analysis-on-aws/)
 
 
 ##  Cleanup
